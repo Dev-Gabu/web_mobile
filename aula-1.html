@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Título da página</title>
+    </head>
+
+    <body>
+        <h1>Me contrata</h1>
+        <h2>Sei fazer churrasco</h2>
+        <h3>Com maisena e JavaScript</h3>
+
+        <img src="img/download.jpg" title="Primeira imagem" width="80" height="80">
+
+        <a href="https://www.linkedin.com/in/gabriel-tavares-672138226/" target="blank">Contrate aqui</a>
+
+        <h3>Ordenada</h3>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+
+        <h3>Não ordenada</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+
+        <table>
+            <caption>Descrição da Tabela</caption>
+            <thead>
+                <tr>
+                    <th>Coluna I</th>
+                    <th>Coluna II</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Linha I - Coluna I</td>
+                    <td>Linha II - Coluna I</td>
+                </tr>
+                <tr>
+                    <td>Linha I - Coluna II</td>
+                    <td>Linha II - Coluna II</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <form action="/cadastro/" method="post"> 
+            Login: <input type="text" name="login" placeholder="Digite seu login">
+            Senha: <input type="password" name="senha">
+
+            <input type="radio" name="sexo" value="1" checked> Masculino
+            <input type="radio" name="sexo" value="2"> Feminino 
+
+            <input type="checkbox" nome="veiculo1" value="bike"> Eu tenho uma bike
+            <input type="checkbox" nome="veiculo2" value="carro"> Eu tenho uma carro
+
+            Curso:
+            <select name="curso">
+                <option value="1">Ciência da Computação</option>
+                <option value="2">Direito</option>
+                <option value="3">Engenharia Elétrica</option>
+                <option value="4">Medicina</option>
+            </select>
+
+            Mensagem: <textarea name="message" rows="10" cols="30"></textarea>
+            Idade: <input type="number" name="idade" min="0" max="100" step="1">
+            Data de Nascimento: <input type="date" name="data_nascimento">
+
+            Auto Complete: <input list="cheeses">
+            <datalist id="cheeses">
+                <option>Bulbassaur</option>
+                <option>Charmander</option>
+                <option>Squirtle</option>
+                <option>Chikorita</option>
+                <option>Totodile</option>
+                <option>Cindaquil</option>
+                <option>Treecko</option>
+                <option>Mudkip</option>
+                <option>Torchic</option>
+            </datalist>
+
+            <input type="hidden" name="country" value="Brasil">
+
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Confirmar">
+        </form>
+
+       <div>
+        Elementos de bloco
+       </div>
+        
+       <span>11111</span>
+       <span>22222</span>
+
+    </body>
+
+</html>
