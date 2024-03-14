@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Título da página</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/funcoes.js"></script>
+        
+    </head>
+
+    <body>
+
+        <!-- Breadcrumbs -->
+        <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+              </nav>
+        </div>
+
+        <!-- Badge -->
+
+        <div>
+            <h1>Título Desnecessariamente Grande <span class="badge text-bg-secondary">Big</span></h1>
+            <button type="button" class="btn btn-primary">
+                Tinder <span class="badge text-bg-secondary">13</span>
+            </button>
+        </div>
+
+        <!-- Alerts -->
+            <div class="alert alert-success" role="alert">
+            Peixe a 10 conto o kiloo!
+          </div>
+          <div class="alert alert-danger" role="alert">
+            Farinha Farinha olha a farinha!
+          </div>
+
+        <!-- Botões -->
+
+        <button type="button" class="btn btn-primary" type="button" onclick="minhafuncao1()">Principal</button>
+        <button type="button" class="btn btn-secondary">Secondario</button>
+        <button type="button" class="btn btn-success">Sucesso</button>
+        <button type="button" class="btn btn-danger" type="button" onclick="minhafuncao2()">Perigo</button>
+        <button type="button" class="btn btn-warning">Alerta</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Imundo</button>
+        <button type="button" class="btn btn-dark">Descolado</button>
+        <button type="button" class="btn btn-link">Link</button>
+
+        <div id="area-mensagens">Area de mensagens</div>
+
+        <!-- Slider -->
+
+        <label for="customRange1" class="form-label">Example range</label>
+        <input type="range" class="form-range" id="customRange1">
+
+         <!-- Forms -->
+
+         <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Sobrenome</label>
+              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Nome de Usuário</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom04" class="form-label">UF</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>TO</option>
+                <option>SP</option>
+                <option>RJ</option>
+                <option>AM</option>
+                <option>CE</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Telefone</label>
+              <input type="text" class="form-control" id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Concordo com os termos e condições.
+                </label>
+                <div class="invalid-feedback">
+                  Você deve aceitar os termos e condições para seguir.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Validar formulário</button>
+            </div>
+          </form>
+
+        <!-- Cards -->
+
+        <div class="card" style="width: 18rem;">
+            <img src="img/download.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bob Pix</h5>
+              <p class="card-text">Venha você também lucrar com investimentos confiáveis de profissionais treinados.</p>
+              <a href="#" class="btn btn-primary">Clique aqui!!</a>
+            </div>
+
+          </div>
+
+        <!-- Progress Bar -->
+        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+        </div>
+
+        <!-- Spinners coloridos -->
+
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+        <!-- Modal Popup -->
+
+        <!-- Botão gatilho -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Pop
+        </button>
+                <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Permanecer muito tempo nessa página pode vir a causar problemas mentais, deseja continuar mesmo assim?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Confia no pai</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
