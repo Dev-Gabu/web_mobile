@@ -7,7 +7,7 @@ class Veiculo(models.Model):
     modelo = models.CharField(max_length=100)
     ano = models.IntegerField()
     cor = models.SmallIntegerField(choices=OPCOES_CORES)
-    #foto = models.ImageField(blank=True, null=True, upload_to='veiculo/fotos')
+    foto = models.ImageField(blank=True, null=True, upload_to='veiculo/fotos')
     combustivel = models.SmallIntegerField(choices=OPCOES_COMBUSTIVEL)
 
     def __str__(self):
@@ -17,3 +17,9 @@ class Veiculo(models.Model):
             self.ano,
             self.get_cor_display()
         )
+    
+    def get_nome_marca(self):
+        for codigo, nome in OPCOES_MARCAS:
+            if self.marca == codigo:
+                return nome
+        return None

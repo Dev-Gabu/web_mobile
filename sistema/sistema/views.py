@@ -9,8 +9,7 @@ class Login(View):
     def get(self, request):
         contexto = {'mensagem':'login'}
         if request.user.is_authenticated:
-            return HttpResponse('Usuário já está autenticado')
-            #return redirect('/veiculos')
+            return redirect('/veiculo')
         else:
             return render(request,'autenticacao.html', contexto)
     
@@ -26,8 +25,7 @@ class Login(View):
             #Verifica se o usuário ainda está ativo no sistema
             if user.is_active:
                 login(request, user)
-                return HttpResponse('Usuário autenticado com sucesso!')
-                #return redirect("/veiculos")
+                return redirect("/veiculo")
 
             return render(request, "autenticacao.html", {'mensagem':'Usuário Inativo'})
         return render(request, "autenticacao.html", {'mensagem':'Usuário ou senha inválidos'})

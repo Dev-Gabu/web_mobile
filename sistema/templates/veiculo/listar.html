@@ -1,7 +1,33 @@
-<h2>Lista de Veiculos</h2>
+{% extends "../base.html" %}
+    { % block css_local % }
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+    { % endblock % }
+    
+    {% block content %}
+        <div class="container mt-5">
+            <div class="row">
+                {% for veiculo in veiculos %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
 
-<ul>
-    {% for v in veiculos%}
-    <li>{{ v }}</li>
-    {% endfor%}
-</ul>
+                        {% if veiculo.foto %}
+                        <img src="{{ veiculo.foto.url }}" class="card-img-top" alt="Image">
+                        {% else %}
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Placeholder Image">
+                        {% endif %}
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{ veiculo.get_nome_marca }} - {{ veiculo.modelo }}</h5>
+                            <p class="card-text">Ano: {{ veiculo.ano }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
