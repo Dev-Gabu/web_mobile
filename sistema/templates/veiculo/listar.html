@@ -24,6 +24,10 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ veiculo.get_nome_marca }} - {{ veiculo.modelo }}</h5>
                             <p class="card-text">Ano: {{ veiculo.ano }}</p>
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-warning" href='/veiculo/{{veiculo.id}}' type="button">Editar</button>
+                                <button class="btn btn-danger" type="button">Deletar</button>
+                              </div>
                         </div>
                     </div>
                 </div>
