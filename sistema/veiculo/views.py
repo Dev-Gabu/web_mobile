@@ -7,7 +7,7 @@ from veiculo.models import Veiculo
 from veiculo.serializers import SerializadorVeiculo
 from rest_framework import permissions
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, DestroyAPIView
 from veiculo.forms import FormularioVeiculo
 from django.urls import reverse_lazy
 
@@ -28,6 +28,18 @@ class APIListarItens(ListAPIView):
     serializer_class = SerializadorVeiculo
     authentication_classes = [TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
+
+class APIDeletarVeiculos(DestroyAPIView):    
+    """
+    View para deletar instâncias de veículos (por meio da API REST)    
+    """
+
+    serializer_class = SerializadorVeiculo    
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):        
+    
+        return Veiculo.objects.all()
     
 class FotoVeiculo(View):
 
